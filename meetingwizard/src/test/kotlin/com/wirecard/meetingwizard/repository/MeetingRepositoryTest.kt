@@ -1,13 +1,15 @@
 package com.wirecard.meetingwizard.repository
 
 import com.wirecard.meetingwizard.model.Meeting
+import com.wirecard.meetingwizard.model.MeetingRoom
+import com.wirecard.meetingwizard.model.Person
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.test.context.junit4.SpringRunner
-import java.time.LocalDate
+import java.time.LocalDateTime
 
 @RunWith(SpringRunner::class)
 @DataJpaTest
@@ -17,7 +19,10 @@ class MeetingRepositoryTest() {
 
     @Test
     fun whenCreatingMeetingRepository_thenListObject() {
-        val meeting = Meeting(null, null, "Name", "Description", "Luis", LocalDate.now())
+
+        val personList = mutableListOf<Person>()
+
+        val meeting = Meeting( null, meetingRoom = MeetingRoom(1), description = "Description", participants = personList, start_date = LocalDateTime.now(), end_date = LocalDateTime.now().plusDays(2))
 
         meetingRepository!!.save(meeting);
 
