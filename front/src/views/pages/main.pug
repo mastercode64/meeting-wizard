@@ -17,22 +17,30 @@ block body
 
         .text Agendar 
 
-    .insert-meeting
-
-        //- .inserts
-        //-     label(for="meetingRoom") Título da Reunião
-        //-     input.-long(type="text" name = "meetingRoom" id = "meetingRoom" )
-
-        //- .inserts
-        //-     label(for="description") Descrição da Reunião
-        //-     input.-long(type="text" name = "description" id = "description" )
+    .verify-room
         
         .inserts
             label(for="start_date") Hora de Inicio
-            input(type="text" name = "start_date" id = "start_date" )
+            input.startTime(type="text" name = "start_date" id = "start_date" value = '2019-07-05%2013:00:00' )
 
         .inserts
             label(for="end_date") Hora Final
-            input(type="text" name = "end_date" id = "end_date" )
+            input.endTime(type="text" name = "end_date" id = "end_date" value = '2019-07-05%2014:00:00' )
 
-        button.confirm-room(type='submit') Confirmar
+        button.confirm-room#verifyRoomBtn Confirmar
+
+        .freeRooms
+            //- .content Sala disponivel 
+
+
+    .insert-room
+
+        .inserts
+            label(for="meetingRoom") Título da Reunião
+            input.-long(type="text" name = "meetingRoom" id = "meetingRoom" )
+
+        .inserts
+            label(for="description") Descrição da Reunião
+            input.-long(type="text" name = "description" id = "description" )
+
+        button.confirm-room Confirmar

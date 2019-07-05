@@ -63,22 +63,42 @@ button {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
+.freeRooms {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 0;
+  overflow: hidden;
+}
+.freeRooms.-active {
+  height: auto;
+}
+.freeRooms .content {
+  padding: 10px;
+  margin-top: 5px;
+  color: #fff;
+  background: #3f88c5;
+  max-width: 100px;
+  font-size: 14px;
+  margin: 0 5px;
+}
 input {
   border: 1px solid #000;
-  padding: 0 4px;
-  width: 100px;
+  padding: 10px 10px;
   margin: 0 30px;
 }
 input.-long {
   width: 300px;
 }
-.insert-meeting {
+.insert-room {
   width: 600px;
   padding: 30px;
   border: 1px solid #000;
   position: relative;
+  margin-top: 10px;
 }
-.insert-meeting .insert {
+.insert {
   width: 100%;
 }
 .list-room {
@@ -118,4 +138,10 @@ input.-long {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.verify-room {
+  width: 600px;
+  padding: 30px;
+  border: 1px solid #000;
+  position: relative;
 }
