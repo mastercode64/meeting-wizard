@@ -12,6 +12,27 @@ block body
             .nome Salas disponiveis
 
         nav 
-            
-            //- .list-room
-            //-     .nome Sala Brasil
+
+    .create-meeting
+
+        .text Agendar 
+
+    .insert-meeting
+
+        //- .inserts
+        //-     label(for="meetingRoom") Título da Reunião
+        //-     input.-long(type="text" name = "meetingRoom" id = "meetingRoom" )
+
+        //- .inserts
+        //-     label(for="description") Descrição da Reunião
+        //-     input.-long(type="text" name = "description" id = "description" )
+        
+        .inserts
+            label(for="start_date") Hora de Inicio
+            input(type="text" name = "start_date" id = "start_date" )
+
+        .inserts
+            label(for="end_date") Hora Final
+            input(type="text" name = "end_date" id = "end_date" )
+
+        button.confirm-room(type='submit') Confirmar

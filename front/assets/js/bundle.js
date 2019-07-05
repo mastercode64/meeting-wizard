@@ -10,13 +10,4 @@
             nav.insertAdjacentHTML('beforeend', '<div class = "list-room"><div class = "nome">'+ item.roomName +'</div></div>')
         });
     })
-
-    
-
-
-
-    
-
-    
-
 })();
