@@ -7,9 +7,10 @@ data class MeetingRoom(
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long? = null,
-        val roomName: String,
+
+        val roomName: String? = null,
 
         @OneToMany(mappedBy = "meetingRoom")
-        val meeting: Set<Meeting>? = null
+        val meeting: List<Meeting>? = null
 )
 
