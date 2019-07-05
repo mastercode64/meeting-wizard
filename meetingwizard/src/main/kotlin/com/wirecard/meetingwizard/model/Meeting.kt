@@ -1,11 +1,11 @@
 package com.wirecard.meetingwizard.model
 
 import java.time.LocalDateTime
-import java.util.*
 import javax.persistence.*
 
 @Entity
 data class Meeting(
+
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long? = null,
 
