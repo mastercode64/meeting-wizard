@@ -1,7 +1,6 @@
 package com.wirecard.meetingwizard.controller
 
-import com.wirecard.meetingwizard.model.MeetingRoom
-import com.wirecard.meetingwizard.service.MeetingService
+import com.wirecard.meetingwizard.service.MeetingRoomService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus.OK
 import org.springframework.http.ResponseEntity
@@ -11,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/rooms")
-class MeetingController {
+class MeetingRoomController {
 
     @Autowired
-    lateinit var meetingService: MeetingService
+    lateinit var meetingRoomService: MeetingRoomService
 
     @GetMapping
     fun getMeetingRooms(): ResponseEntity<Any> {
-                return ResponseEntity(meetingService.listMeetingRooms(), OK)
+                return ResponseEntity(meetingRoomService.listMeetingRooms(), OK)
     }
 
 
