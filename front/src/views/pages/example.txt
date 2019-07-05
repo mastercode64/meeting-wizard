@@ -1,7 +1,0 @@
-extends ../includes/template/main
-
-block details
-    - title = ''
-    - description = ''
-
-block body
