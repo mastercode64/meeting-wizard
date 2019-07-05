@@ -14,9 +14,6 @@
 .initial-load * {
   transition: none !important;
 }
-body {
-  background-color: #f6f7eb;
-}
 aside {
   position: fixed;
   width: 288px;
@@ -34,12 +31,13 @@ aside nav {
   height: 100%;
   width: 100%;
   text-align: center;
+  overflow: auto;
 }
 .list-room {
   position: relative;
   padding: 10px;
   height: 80px;
-  background: #3f88c5;
+  background: #fff;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -47,14 +45,27 @@ aside nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .list-room:hover {
-  color: #fff;
+  color: #3f88c5;
   transition: ease 0.2s all;
+}
+.list-room:hover:after {
+  width: 100%;
+}
+.list-room:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  left: 0;
+  bottom: 14px;
+  background: #3f88c5;
+  transition: ease 0.4s width;
 }
 .title-nav {
   position: relative;
-  height: 30px;
+  height: 70px;
   width: 100%;
-  background: #c1d7ff;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
