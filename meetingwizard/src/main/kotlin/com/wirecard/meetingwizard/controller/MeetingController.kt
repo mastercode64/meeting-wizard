@@ -9,22 +9,21 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/rooms")
-class MeetingController{
+class MeetingController {
 
     @GetMapping
     fun getMeetingRooms(): ResponseEntity<Any> {
 
         val list = mutableListOf<MeetingRoom>()
 
-        val meeting = MeetingRoom(roomName = "sala1")
-        meeting.id = 1
-        meeting.roomName = "teste"
+        val meeting1 = MeetingRoom(roomName = "sala1")
+        val meeting2 = MeetingRoom(roomName = "sala2")
 
-        list.add(meeting)
+        list.add(meeting1)
+        list.add(meeting2)
 
         return ResponseEntity(list, OK)
     }
-
 
 
 }
