@@ -6,7 +6,7 @@ import javax.persistence.*
 @Entity
 data class Meeting(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id : Long,
+        var id: Long,
         @ManyToOne @JoinColumn
         val meetingRoom: MeetingRoom,
         val name: String,
