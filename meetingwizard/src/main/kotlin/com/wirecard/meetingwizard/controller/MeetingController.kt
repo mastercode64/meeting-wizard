@@ -15,12 +15,12 @@ class MeetingController {
     lateinit var meetingService: MeetingService
 
     @PostMapping
-    fun createMeeting(@RequestBody meeting: Meeting) : ResponseEntity<Any> {
+    fun createMeeting(@RequestBody meeting: Meeting): ResponseEntity<Any> {
         return ResponseEntity(meetingService.createMeeting(meeting), HttpStatus.CREATED)
     }
 
     @GetMapping
-    fun getMeetings() : ResponseEntity<Any> {
+    fun getMeetings(): ResponseEntity<Any> {
         return ResponseEntity(meetingService.getMeetings(), HttpStatus.OK)
     }
 
