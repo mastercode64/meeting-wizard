@@ -1,16 +1,25 @@
 package com.wirecard.meetingwizard.model
 
+import java.time.LocalDateTime
 import java.util.*
 import javax.persistence.*
 
 @Entity
 data class Meeting(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-        var id: Long,
+        var id: Long? = null,
+
         @ManyToOne @JoinColumn
-        val meetingRoom: MeetingRoom,
-        val name: String,
-        val description: String,
-        val owner: String,
-        val start_date: Date
+        val meetingRoom: MeetingRoom? = null,
+
+        val name: String? = null,
+
+        val description: String? = null,
+
+        val start_date: LocalDateTime? = null,
+
+        val end_date: LocalDateTime? = null,
+
+        @OneToMany
+        val participants: List<Person>
 )
