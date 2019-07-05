@@ -14,10 +14,15 @@
 .initial-load * {
   transition: none !important;
 }
+body {
+  padding-left: 288px;
+}
 aside {
-  position: fixed;
+  position: absolute;
   width: 288px;
   height: 100%;
+  top: 0;
+  left: 0;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -32,6 +37,49 @@ aside nav {
   width: 100%;
   text-align: center;
   overflow: auto;
+}
+button {
+  width: 120px;
+  padding: 5px 10px;
+  background: #3f88c5;
+  color: #fff;
+  margin-top: 20px;
+}
+.create-meeting {
+  width: 70px;
+  height: 70px;
+  background: #3f88c5;
+  border-radius: 100%;
+  position: fixed;
+  top: 13px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.create-meeting .agendar {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+input {
+  border: 1px solid #000;
+  padding: 0 4px;
+  width: 100px;
+  margin: 0 30px;
+}
+input.-long {
+  width: 300px;
+}
+.insert-meeting {
+  width: 600px;
+  padding: 30px;
+  border: 1px solid #000;
+  position: relative;
+}
+.insert-meeting .insert {
+  width: 100%;
 }
 .list-room {
   position: relative;
