@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface MeetingRepository: CrudRepository<Meeting, Long> {
+interface MeetingRoomRepository: CrudRepository<Meeting, Long> {
 }
