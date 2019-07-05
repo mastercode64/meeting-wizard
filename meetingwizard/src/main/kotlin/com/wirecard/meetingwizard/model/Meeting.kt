@@ -4,11 +4,11 @@ import javax.persistence.*
 
 
 @Entity
-data class MeetingRoom(
+data class MeetingRoom (
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id : Long,
-    val roomName: String
+    var id: Long? = null,
 
+    var roomName: String
 )
-
