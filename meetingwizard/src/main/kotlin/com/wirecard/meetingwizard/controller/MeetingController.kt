@@ -1,6 +1,8 @@
 package com.wirecard.meetingwizard.controller
 
 import com.wirecard.meetingwizard.model.MeetingRoom
+import com.wirecard.meetingwizard.service.MeetingService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus.OK
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -11,19 +13,16 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/rooms")
 class MeetingController {
 
+    @Autowired
+    lateinit var meetingService: MeetingService
+
     @GetMapping
     fun getMeetingRooms(): ResponseEntity<Any> {
-
-        val list = mutableListOf<MeetingRoom>()
-
-        val meeting1 = MeetingRoom(roomName = "sala1")
-        val meeting2 = MeetingRoom(roomName = "sala2")
-
-        list.add(meeting1)
-        list.add(meeting2)
-
-        return ResponseEntity(list, OK)
+                return ResponseEntity(meetingService.listMeetingRooms(), OK)
     }
+
+
+
 
 
 }
